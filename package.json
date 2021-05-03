@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/merbin2012/cordova-plugin-codeplay-in-app-update.git"
+    "url": "git+https://github.com/mdnb-boss/plugin-cordova-app-update-interage.git"
   },
   "keywords": [
     "ecosystem:cordova",
@@ -19,7 +19,7 @@
   "author": "Marcelo Daniel",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/merbin2012/cordova-plugin-codeplay-in-app-update/issues"
+    "url": "https://github.com/mdnb-boss/plugin-cordova-app-update-interage/issues"
   },
-  "homepage": "https://github.com/merbin2012/cordova-plugin-codeplay-in-app-update#readme"
+  "homepage": "https://github.com/mdnb-boss/plugin-cordova-app-update-interage#readme"
 }
