@@ -1,0 +1,25 @@
+{
+  "name": "plugin-cordova-app-update-interage",
+  "version": "1.0.0",
+  "description": "Plugin de Auto atualização de aplicativos Ionic para Android",
+  "cordova": {
+    "id": "plugin-cordova-app-update-interage",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/merbin2012/cordova-plugin-codeplay-in-app-update.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Marcelo Daniel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/merbin2012/cordova-plugin-codeplay-in-app-update/issues"
+  },
+  "homepage": "https://github.com/merbin2012/cordova-plugin-codeplay-in-app-update#readme"
+}
