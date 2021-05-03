@@ -1,6 +1,6 @@
 {
   "name": "plugin-cordova-app-update-interage",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Plugin de Auto atualização de aplicativos Ionic para Android",
   "cordova": {
     "id": "plugin-cordova-app-update-interage",

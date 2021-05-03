@@ -2,7 +2,8 @@ package cordova.plugin.codeplay.in.app.update;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
-
+import org.apache.cordova.CordovaInterface;
+import org.apache.cordova.CordovaWebView;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -14,11 +15,22 @@ import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
 import com.google.android.play.core.install.model.AppUpdateType;
 import com.google.android.play.core.install.model.UpdateAvailability;
 import com.google.android.play.core.tasks.Task;
+import android.widget.Toast;
 
 public class inappupdate_interage extends CordovaPlugin {
 
 
 	CallbackContext _callbackContex;
+
+	@Override
+	public void initialize(CordovaInterface cordova, CordovaWebView webView) {
+		super.initialize(cordova, webView);
+		// your init code here
+		
+		Context testParameter = (cordova.getActivity()).getBaseContext();
+
+		Toast.makeText(testParameter, "AutoUpdate( Android ) iniciado...", Toast.LENGTH_SHORT).show();
+	}
 
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -34,7 +46,7 @@ public class inappupdate_interage extends CordovaPlugin {
 		// Returns an intent object that you use to check for an update.
 		Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager.getAppUpdateInfo();
 
-
+		//Toast.makeText(testParameter, "Classe executada com sucesso", Toast.LENGTH_SHORT).show();
 
 		if (action.equals("isUpdateAvailable"))
 		{
@@ -45,7 +57,7 @@ public class inappupdate_interage extends CordovaPlugin {
 						&& appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE))
 				{
 
-					//Toast.makeText(testParameter, "Success - Will start update", Toast.LENGTH_LONG).show();
+					//Toast.makeText(testParameter, "Success - Will start update", Toast.LENGTH_SHORT).show();
 
 					callbackContext.success("true");
 
@@ -83,7 +95,7 @@ public class inappupdate_interage extends CordovaPlugin {
 
 						try {
 
-							//Toast.makeText(testParameter, "Success - Will start update", Toast.LENGTH_LONG).show();
+							//Toast.makeText(testParameter, "Success - Will start update", Toast.LENGTH_SHORT).show();
 
 							appUpdateManager.startUpdateFlowForResult(
 									appUpdateInfo,
@@ -94,13 +106,13 @@ public class inappupdate_interage extends CordovaPlugin {
 							e.printStackTrace();
 							String str=e.getMessage();
 							callbackContext.error(str);
-							//Toast.makeText(testParameter, "Error - "+str, Toast.LENGTH_LONG).show();
+							//Toast.makeText(testParameter, "Error - "+str, Toast.LENGTH_SHORT).show();
 						}
 					}
 					else
 					{
 						callbackContext.success("No update available");
-						//Toast.makeText(testParameter, "Else part executed - no update available", Toast.LENGTH_LONG).show();
+						//Toast.makeText(testParameter, "Else part executed - no update available", Toast.LENGTH_SHORT).show();
 
 					}
 				});
@@ -114,7 +126,7 @@ public class inappupdate_interage extends CordovaPlugin {
 
 						try {
 
-							//Toast.makeText(testParameter, "Success - Will start update", Toast.LENGTH_LONG).show();
+							//Toast.makeText(testParameter, "Success - Will start update", Toast.LENGTH_SHORT).show();
 
 							appUpdateManager.startUpdateFlowForResult(
 									appUpdateInfo,
@@ -125,7 +137,7 @@ public class inappupdate_interage extends CordovaPlugin {
 							e.printStackTrace();
 							String str=e.getMessage();
 							callbackContext.error(str);
-							//Toast.makeText(testParameter, "Error - "+str, Toast.LENGTH_LONG).show();
+							//Toast.makeText(testParameter, "Error - "+str, Toast.LENGTH_SHORT).show();
 						}
 
 
@@ -134,7 +146,7 @@ public class inappupdate_interage extends CordovaPlugin {
 					else
 					{
 						callbackContext.success("No update available");
-						//Toast.makeText(testParameter, "Else part executed - no update available", Toast.LENGTH_LONG).show();
+						//Toast.makeText(testParameter, "Else part executed - no update available", Toast.LENGTH_SHORT).show();
 
 					}
 				});
