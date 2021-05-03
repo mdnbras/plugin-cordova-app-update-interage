@@ -12,6 +12,7 @@ ionic cordova plugin rm plugin-cordova-app-update-interage
 ```js
 cordova.plugins.inappupdate.isUpdateAvailable(success,fail);
 ```
+
 - Example
 ```js
 cordova.plugins.inappupdate.isUpdateAvailable(success,fail);
