@@ -29,7 +29,7 @@ public class inappupdate_interage extends CordovaPlugin {
 		
 		Context testParameter = (cordova.getActivity()).getBaseContext();
 
-		Toast.makeText(testParameter, "AutoUpdate( Android ) iniciado...", Toast.LENGTH_SHORT).show();
+		// Toast.makeText(testParameter, "AutoUpdate( Android ) iniciado...", Toast.LENGTH_SHORT).show();
 	}
 
 	@Override
